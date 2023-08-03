@@ -54,6 +54,18 @@ let students = [
 
 //Q2 - What is Function Expression?
 // When you store a function inside a variable is called FE.
-const square = function (num){
+// const square = function (num){  //This is called Anonymous function, the function which has no name. And this can be assigned to variable.
+//      return num * num;
+// }
+// console.log(square(5));
+
+//Q3 - What are first class function?
+// Where a function can be treated like a variable or assigned to variable and we can pass in another function is called First Class Function.
+
+function square(num) {
      return num * num;
 }
+function displaySquare(fn) {
+     console.log("Square is " + fn(5));
+}
+displaySquare(square);
