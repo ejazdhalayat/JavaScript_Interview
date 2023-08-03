@@ -48,6 +48,12 @@ let students = [
 
 //Functions in Javascript
 // Q1 - What is Function Declaration?
-function square(num) {
+// function square(num) {
+//      return num * num;
+// }
+
+//Q2 - What is Function Expression?
+// When you store a function inside a variable is called FE.
+const square = function (num){
      return num * num;
 }
