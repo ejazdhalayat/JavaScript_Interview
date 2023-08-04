@@ -110,9 +110,25 @@
 
 // Q9 - Params vs Arguments
 
-function square(num) { //Params : (Params) are variables declared in a function's definition to receive values.
-    console.log(num * num);
-}
-square(5); //Argumets : The actual values passed to a function when it is called, 
+// function square(num) { //Params : (Params) are variables declared in a function's definition to receive values.
+//     console.log(num * num);
+// }
+// square(5); //Argumets : The actual values passed to a function when it is called.
+
+// function multiply(...num) { //rest operator. 
+//     console.log(num[0] * num[1]);
+// }
+// var arr = [5, 6];
+// multiply(...arr); //spread operator
+
+// const fn = (a, ...numbers, x, y) => {  //Uncaught SyntaxError: Rest parameter must be last formal parameter
+//     console.log(x, y)
+// }
+// fn(5,6,3,7)
+
+// const fn = (a, x, y, ...numbers) => {
+//     console.log(x, y, numbers)
+// }
+// fn(5,6,3,7,8,9) // O/P : 6 3 (3) [7, 8, 9]
 
 
