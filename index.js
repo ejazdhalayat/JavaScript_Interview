@@ -131,4 +131,23 @@
 // }
 // fn(5,6,3,7,8,9) // O/P : 6 3 (3) [7, 8, 9]
 
+// Q10 - Callback Function
+//A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
+
+// document.addEventListener("click",function (params) {
+
+// })
+
+// Q11 - Arrow functions
+
+// const add = function (firstNum, secondNum) {  //Normal Function
+//     return firstNum + secondNum;
+// };
+
+// const add = (firstNum, secondNum) => {  //Arrow function
+//     return firstNum + secondNum;
+// };
+
+const add = (firstNum, secondNum) =>  firstNum + secondNum ; //Arrow function
+    
 
