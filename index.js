@@ -3,12 +3,12 @@
 //map, filter and reduce 
 //Q1 - Return only name of students in Capital
 
-let students = [
-     {name: "Piyush", rollNumber: 31, marks: 80 },
-     {name: "Jenny", rollNumber: 15, marks: 69 },
-     {name: "Kaushal", rollNumber: 16, marks: 35 },
-     { name: "Dilpreet", rollNumber: 7, marks: 55 },
-];
+// let students = [
+//      {name: "Piyush", rollNumber: 31, marks: 80 },
+//      {name: "Jenny", rollNumber: 15, marks: 69 },
+//      {name: "Kaushal", rollNumber: 16, marks: 35 },
+//      { name: "Dilpreet", rollNumber: 7, marks: 55 },
+// ];
 
 //using for loop
 // let names = [];
@@ -47,6 +47,7 @@ let students = [
 // console.log(totalMarks)
 
 //Functions in Javascript
+
 // Q1 - What is Function Declaration?
 // function square(num) {
 //      return num * num;
@@ -61,11 +62,57 @@ let students = [
 
 //Q3 - What are first class function?
 // Where a function can be treated like a variable or assigned to variable and we can pass in another function is called First Class Function.
+// function square(num) {
+//      return num * num;
+// }
+// function displaySquare(fn) {
+//      console.log("Square is " + fn(5));
+// }
+// displaySquare(square);
 
-function square(num) {
-     return num * num;
+//Q4 - What is IIFE?
+//IIFE stands for Immediately Invoked Function Expression. It is a JavaScript design pattern used to create and execute a function immediately after its declaration. 
+// (function square(num) {
+//      console.log(num * num);
+// })(5);
+
+//Q6 - IIFE - O/p Based question?
+// (function (x) {
+//      return (function (y){
+//           console.log(x); //1
+//      })(2);
+// })(1);
+
+//Q7 - Function Scope O/p based question.
+// for (let i = 0; i < 5; i++) {
+//     setTimeout(function () {
+//         console.log(i);
+//     }, i * 1000);
+// }  // O/p is : 0 1 2 3 4 
+
+// for (var i = 0; i < 5; i++) {
+//     setTimeout(function () {
+//         console.log(i);
+//     }, i * 1000);
+// } // O/p : the loop will keep running
+
+//Q8 - Function Hoisting - O/P Based Question
+// var x = 21; //Global Scope
+
+// var fun = function () {
+//     console.log(x);
+//     var x = 20;
+// };
+// fun();
+
+// When fun() is called, it tries to log the value of the variable x. However, since there is a variable x declared inside the function using var x = 20;, JavaScript considers it as a local variable that shadows the global x.
+// At this point, the local variable x is declared but not yet assigned a value, so it is in the "temporal dead zone." When trying to log its value, it will result in undefined.
+
+// Q9 - Params vs Arguments
+
+function square(num) { //Params : (Params) are variables declared in a function's definition to receive values.
+    console.log(num * num);
 }
-function displaySquare(fn) {
-     console.log("Square is " + fn(5));
-}
-displaySquare(square);
+square(5); //Argumets : The actual values passed to a function when it is called, 
+
+
